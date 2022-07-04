@@ -2,6 +2,6 @@
 
 ## 全局安装
 ```
-npm i sh-vue3-cli -g
+npm i shuhuan-cli -g
 shuhuan init <name>
 ```

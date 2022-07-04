@@ -1,6 +1,6 @@
 {
-  "name": "sh-vue3-cli",
-  "version": "1.0.7",
+  "name": "shuhuan-cli",
+  "version": "1.0.1",
   "description": "",
   "type": "module",
   "bin": {

@@ -1,14 +1,9 @@
-// 可以自动的解析命令和参数，用于处理用户输入的命令
 import { Command } from 'commander';
-// 下载文件
 import download from 'download-git-repo';
-// 通用的命令行用户界面集合，用于和用户进行交互
 import inquirer from 'inquirer';
 import fs from 'fs';
-// handlebars语法处理
 import handlebars from 'handlebars';
 import ora from 'ora';
-// 图标
 import symbols from 'log-symbols';
 import chalk from 'chalk';
 // import packages from './package.json'
@@ -30,7 +25,6 @@ program.version('1.0.0', '-v, --version')
         description: answers.description,
         author: answers.author
       };
-      // 下载模版 第一个参数：github:owner/repoName 第二个参数：模板放置的文件夹
       download('github:luchaoet/sh-vite-vue3-project', name, function (err) {
         if (err) {
           spinner.fail();
