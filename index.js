@@ -6,12 +6,12 @@ import handlebars from 'handlebars';
 import ora from 'ora';
 import symbols from 'log-symbols';
 import chalk from 'chalk';
-// import packages from './package.json'
-
+import { readPackage } from 'read-pkg';
 const program = new Command();
-// const version = packages.version || '1.0.0';
 
-program.version('1.0.0', '-v, --version')
+const { version } = await readPackage();
+
+program.version(version, '-v, --version')
   .command('init <name>')
   .action((name) => {
     inquirer.prompt([
